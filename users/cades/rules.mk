@@ -1,0 +1,5 @@
+# CONSOLE_ENABLE = yes
+# COMMAND_ENABLE = yes
+# KEY_LOCK_ENABLE = yes
+TAP_DANCE_ENABLE=yes
+SRC += cades.c

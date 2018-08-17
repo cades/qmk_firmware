@@ -6,6 +6,7 @@
 #include "print.h"
 #include "timer.h"
 #include "wait.h"
+#include "progmem.h"
 
 
 /* Host driver */

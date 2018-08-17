@@ -16,12 +16,12 @@
 #include "suspend.h"
 #include "matrix.h"
 
-static int8_t sendchar_func(uint8_t c)
-{
-    xmit(c);        // SUART
-    sendchar(c);    // LUFA
-    return 0;
-}
+/* static int8_t sendchar_func(uint8_t c) */
+/* { */
+/*     xmit(c);        // SUART */
+/*     sendchar(c);    // LUFA */
+/*     return 0; */
+/* } */
 
 static void SetupHardware(void)
 {

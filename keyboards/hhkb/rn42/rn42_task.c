@@ -115,10 +115,10 @@ void rn42_task(void)
         /* every minute */
         uint32_t t = timer_read32()/1000;
         if (t%60 == 0) {
-            uint16_t v = battery_voltage();
-            uint8_t h = t/3600;
-            uint8_t m = t%3600/60;
-            uint8_t s = t%60;
+            // uint16_t v = battery_voltage();
+            // uint8_t h = t/3600;
+            // uint8_t m = t%3600/60;
+            // uint8_t s = t%60;
             dprintf("%02u:%02u:%02u\t%umV\n", h, m, s, v);
             /* TODO: xprintf doesn't work for this.
             xprintf("%02u:%02u:%02u\t%umV\n", (t/3600), (t%3600/60), (t%60), v);
@@ -248,8 +248,8 @@ static void pairing(void)
 
 bool command_extra(uint8_t code)
 {
-    uint32_t t;
-    uint16_t b;
+    // uint32_t t;
+    // uint16_t b;
     switch (code) {
         case KC_H:
         case KC_SLASH: /* ? */
@@ -326,11 +326,11 @@ bool command_extra(uint8_t code)
             xprintf("\n");
             xprintf("RemoteWakeupEnabled: %X\n", USB_Device_RemoteWakeupEnabled);
             xprintf("VBUS: %X\n", USBSTA&(1<<VBUS));
-            t = timer_read32()/1000;
-            uint8_t d = t/3600/24;
-            uint8_t h = t/3600;
-            uint8_t m = t%3600/60;
-            uint8_t s = t%60;
+            // t = timer_read32()/1000;
+            // uint8_t d = t/3600/24;
+            // uint8_t h = t/3600;
+            // uint8_t m = t%3600/60;
+            // uint8_t s = t%60;
             xprintf("uptime: %02u %02u:%02u:%02u\n", d, h, m, s);
 #if 0
             xprintf("LINK0: %s\r\n", get_link(RN42_LINK0));
@@ -341,9 +341,9 @@ bool command_extra(uint8_t code)
             return true;
         case KC_B:
             // battery monitor
-            t = timer_read32()/1000;
-            b = battery_voltage();
-            xprintf("BAT: %umV\t", b);
+            // t = timer_read32()/1000;
+            // b = battery_voltage();
+            // xprintf("BAT: %umV\t", b);
             xprintf("%02u:",   t/3600);
             xprintf("%02u:",   t%3600/60);
             xprintf("%02u\n",  t%60);
