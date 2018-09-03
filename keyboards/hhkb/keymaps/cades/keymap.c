@@ -133,11 +133,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       |------+-----+-----+-----+----+----+----+----+-----+-----+-----+-----+-------+-------+-----|
       |      | Br- | Br+ |     |    |    |    |    |     |     |     |     |       |       |     |
       |------+-----+-----+-----+----+----+----+----+-----+-----+-----+-----+-------+-------+-----|
-      |******| Vut | VoD | VoU |    |    |    |    |     |     |     |     |       |       |
+      |******| Vut | VoD | VoU |    |    |    |    |MS_U |     |     |     |       |       |
       |------+-----+-----+-----+----+----+----+----+-----+-----+-----+-----+-------+-------+
-      |      |PvTrk|Pl/Ps|NxTrk|    |    |    |    |     |     |     |     |       |
+      |      |PvTrk|Pl/Ps|NxTrk|    |    |BTN1|MS_L|MS_D |MS_R |     |     |       |
       |------+-----+-----+-----+----+----+----+----+-----+-----+-----+-----+-------+
-      |      |     |     |     |    |    |    |    |     |     |     |     |       |
+      |      |     |     |     |    |    |BTN2|ACL0|ACL1 |ACL2 |     |     |       |
       |------+-----+-----+-----+----+----+----+----+-----+-----+-----+-----+-------+
 
                  |------+------+----------------------+------+------+
@@ -148,9 +148,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [MEDIA] = LAYOUT(
         KC_TRNS, KC_SLCK, KC_PAUS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_MRWD, KC_MPLY, KC_MFFD, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_MRWD, KC_MPLY, KC_MFFD, KC_TRNS, KC_TRNS, KC_BTN1, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN2, KC_ACL0, KC_ACL1, KC_ACL2, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
     /* ESC Layer: (ROpt)
