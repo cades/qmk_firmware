@@ -35,11 +35,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return false;
   case MY_PGUP:
     if (record->event.pressed) {
-      unregister_code(KC_LCTL);
+      unregister_code(KC_LALT);
       register_code(KC_PGUP);
     } else {
       unregister_code(KC_PGUP);
-      register_code(KC_LCTL);
+      register_code(KC_LALT);
     }
     return false;
   case MY_PGDN:
@@ -133,11 +133,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       |--------+-----+------+------+---+---+------+------+-------+-------+-------+-----+------+------+---|
       |        | Br- | Br+  |      |   |   |      |      | PvTrk | Pl/Ps | NxTrk | Mut | VolD | VolU |   |
       |--------+-----+------+------+---+---+------+------+-------+-------+-------+-----+------+------+---|
-      | ****** |     | BTN2 | BTN1 |   |   |      |      | MS_U  |       |       |     |      |      |   |
+      | ****** |     | BTN2 | BTN1 |   |   | WH_D | WH_R | MS_U  | WH_L  |       |     |      |      |   |
       |--------+-----+------+------+---+---+------+------+-------+-------+-------+-----+------+------+---|
-      |        |     |      |      |   |   | BTN1 | MS_L | MS_D  | MS_R  |       |     |      |      |   |
+      |        |     |      |      |   |   | WH_U | MS_L | MS_D  | MS_R  |       |     |      |      |   |
       |--------+-----+------+------+---+---+------+------+-------+-------+-------+-----+------+------+---|
-      |        |     |      |      |   |   | BTN2 | ACL0 | ACL1  | ACL2  |       |     |      |      |   |
+      |        |     |      |      |   |   |      | ACL0 | ACL1  | ACL2  |       |     |      |      |   |
       |--------+-----+------+------+---+---+------+------+-------+-------+-------+-----+------+------+---|
 
                  |------+------+----------------------+------+------+
@@ -148,9 +148,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [MEDIA] = LAYOUT(
         KC_TRNS, KC_SLCK, KC_PAUS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MRWD, KC_MPLY, KC_MFFD, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_BTN2, KC_BTN1, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN2, KC_ACL0, KC_ACL1, KC_ACL2, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_BTN2, KC_BTN1, KC_TRNS, KC_TRNS, KC_WH_D, KC_WH_R, KC_MS_U, KC_WH_L, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_WH_U, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_ACL0, KC_ACL1, KC_ACL2, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
     /* ESC Layer: (ROpt)
@@ -246,7 +246,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_PGUP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MY_PGUP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)};
 
 const uint16_t PROGMEM fn_actions[] = {
